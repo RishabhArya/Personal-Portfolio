@@ -1,18 +1,17 @@
 <?php
   $msg = $_POST['msg'];
   $t=time();
-  $temp=$t;
   $date=date("d-m-Y",$t);
-  $datee=$temp."123321".$date;
-  mysqli_query(mysqli_connect("localhost","root","","confessions"),"INSERT INTO message(msg_no,msg) VALUES('$datee','$msg')" );
+  $date=$t."  ".$date;
+  mysqli_query(mysqli_connect("localhost","root","","confessions"),"INSERT INTO message(msg_no,msg) VALUES('$date','$msg')" );
 ?>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
   <title>Rishabh Arya [Beta]</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Slab:700'>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+  <link rel="stylesheet" href="./css/normalize.min.css">
+  <link rel='stylesheet' href='./css/Roboto+Slab.css'>
+  <link rel='stylesheet' href='./css/Montserrat.css'>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -53,10 +52,10 @@
           <a class="loading" id="signature" href="https://www.anwarazeez.com" title="Me :)" target="_blank"></a>
         </div>
     </div>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
-    <script src='http://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js'></script>
+    <script src='./js/mobile-detect.min.js'></script>
+    <script src='./js/three.min.js'></script>
+    <script src='./js/jquery.min.js'></script>
+    <script src='./js/jquery.mCustomScrollbar.concat.min.js'></script>
     <script>
     var input = document.getElementById("myInput");
     input.addEventListener("keyup", function(event) {

@@ -8,12 +8,20 @@
  *  Last update on: 2018/10/24
  *  ©2018 Yahia Refaiea. all rights reserved.
  */
+
 .w3-input{
   padding:8px;
   display:block;
   border:none;
   border-bottom:1px solid #ccc;
   width:50%;
+}
+.button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
 }
 /*
  input[value=Have a crush on Me] {
