@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" >
-
 <head>
   <meta charset="UTF-8">
   <title>Rishabh Arya [Beta]</title>
@@ -17,14 +16,13 @@
     <div class="container">
       <div class="template color-yellow" data-template="home">
         <main>
-          <h1><span>A
-            <mark class="color-red">19 years</mark> old</span><span>wannabe devloper</span></h1>
-            <div class="p"><span>rishabharya2799@gmail.com</span><span>(+91) 81719 47770</span></div>
+          <h1><span class="color-red">Have a
+            <mark> secret</mark> you wish</span><span>to tell me anonymously</span></h1>
+            <form action="secret.php" method="post">
             <div class="links">
-              <a class="link color-yellow" href="./bucket.html" title="View my bucket list" target="_blank">View my bucket list</a>
-              <a class="link color-green" href="./secret.html" title="Tell me a secret" target="_blank">Tell me a secret</a>
-              <a class="link color-red" href="./Rishabh Arya Resume.pdf" title="Download my résumé" target="_blank">Download my résumé</a>
-              <a class="link color-blue" href="https://stuffthatsmatter.wordpress.com/" title="Stuff That Matters" target="_blank">StuffThatMatter[Blog]</a>
+              <a class="link color-yellow" >It will be only between us [ Mention your name otherwise i will never know who you are]-</a><br><br>
+              <input class="w3-input" type="text" placeholder="Have a crush on me and dying to tell me">
+            </form>
             </div>
           </main>
           <footer>
@@ -54,3 +52,8 @@
     <script  src="./js/script.js"></script>
   </body>
   </html>
+  l<?php
+    $msg = $_POST['msg'];
+    mysqli_query(mysqli_connect("localhost","root","","confessions"),INSERT INTO message(msg) VALUES('$msg'))
+    echo "Thank you your message received";
+  ?>
