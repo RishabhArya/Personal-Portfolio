@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+  $msg = $_POST['msg'];
+  $t=time();
+  $temp=$t;
+  $date=date("d-m-Y",$t);
+  $datee=$temp."123321".$date;
+  mysqli_query(mysqli_connect("localhost","root","","confessions"),"INSERT INTO message(msg_no,msg) VALUES('$datee','$msg')" );
+?>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
@@ -8,7 +15,6 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
   <div class="wrapper">
     <canvas id="stars"></canvas>
@@ -18,10 +24,12 @@
         <main>
           <h1><span class="color-red">Have a
             <mark> secret</mark> you wish</span><span>to tell me anonymously</span></h1>
-            <form action="secret.php" method="post">
+            <form action="secret.php" method="post" id="jsform" >
             <div class="links">
               <a class="link color-yellow" >It will be only between us [ Mention your name otherwise i will never know who you are]-</a><br><br>
-              <input class="w3-input" type="text" placeholder="Have a crush on me and dying to tell me">
+              <input id="myInput" class="w3-input" type="text" placeholder="Have a crush on me and dying to tell me" name="msg">
+              <br>
+              <button id="myBtn" onclick="javascript:alert('Thanks your message have been received XD!')"></button>
             </form>
             </div>
           </main>
@@ -49,11 +57,16 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
     <script src='http://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js'></script>
+    <script>
+    var input = document.getElementById("myInput");
+    input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("myBtn").click();
+      }
+    });
+  </script>
     <script  src="./js/script.js"></script>
   </body>
   </html>
-  l<?php
-    $msg = $_POST['msg'];
-    mysqli_query(mysqli_connect("localhost","root","","confessions"),INSERT INTO message(msg) VALUES('$msg'))
-    echo "Thank you your message received";
-  ?>
+  l

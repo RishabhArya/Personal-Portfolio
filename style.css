@@ -15,6 +15,13 @@
   border-bottom:1px solid #ccc;
   width:50%;
 }
+.button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+}
 /*
  input[value=Have a crush on Me] {
     background-color: yellow;
