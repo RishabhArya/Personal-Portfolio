@@ -23,6 +23,9 @@
     cursor:pointer;
     overflow: hidden;
 }
+.strike{
+  text-decoration-color:black;
+}
 /*
  input[value=Have a crush on Me] {
     background-color: yellow;
