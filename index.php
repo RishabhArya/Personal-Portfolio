@@ -1,6 +1,7 @@
-<!DOCTYPE html>
+<?php
+  include('counter.php');
+?>
 <html lang="en" >
-
 <head>
   <meta charset="UTF-8">
   <title>Rishabh Arya [Beta]</title>
@@ -18,7 +19,7 @@
       <div class="template color-yellow" data-template="home">
         <main>
           <h1><span>A
-            <mark class="color-red">19 years</mark> old</span><span>wannabe devloper</span></h1>
+            <mark class="color-red">19 years</mark> old</span><span>wannabe developer</span></h1>
             <div class="p"><span>rishabharya2799@gmail.com</span><span>(+91) 81719 47770</span></div>
             <div class="links">
               <a class="link color-yellow" href="./bucket.html" title="View my bucket list" target="_blank">View my bucket list</a>
