@@ -8,7 +8,12 @@
  *  Last update on: 2018/10/24
  *  ©2018 Yahia Refaiea. all rights reserved.
  */
-
+ .center {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+ }
 .w3-input{
   padding:8px;
   display:block;
